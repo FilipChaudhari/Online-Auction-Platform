@@ -1,0 +1,385 @@
+* {
+  box-sizing: border-box;
+}
+
+.register-page {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: rgb(38, 2, 2);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.register-decoration {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  border: 2px solid rgba(235, 170, 45, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.register-decoration-left {
+  left: -620px;
+  top: -620px;
+  transform: rotate(-25deg);
+}
+
+.register-decoration-right {
+  right: -470px;
+  bottom: -620px;
+  transform: rotate(-25deg);
+}
+
+.register-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(48px, 7vw, 96px);
+  padding: 32px clamp(24px, 5vw, 80px);
+}
+
+.register-card {
+  width: min(520px, 100%);
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 16px;
+  padding: 28px 36px 27px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 0 60px rgba(213, 147, 30, 0.1);
+}
+
+.register-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 19px;
+  color: #17294b;
+  font-size: 19px;
+}
+
+.register-brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #101b31;
+  color: #e5a72c;
+  border: 2px solid #e5a72c;
+  font-size: 18px;
+}
+
+.register-brand-name span {
+  color: #c88a18;
+  font-weight: 700;
+}
+
+.register-card h1 {
+  margin: 0 0 5px;
+  color: #142746;
+  font-size: 23px;
+}
+
+.register-subtitle {
+  margin: 0 0 22px;
+  color: #677186;
+  font-size: 12px;
+}
+
+.register-input-group,
+.register-role-wrapper {
+  margin-bottom: 13px;
+}
+
+.register-input-group label,
+.register-role-wrapper label {
+  display: block;
+  margin-bottom: 6px;
+  color: #17233b;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.register-input-wrapper,
+.register-select-wrapper {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+  border: 1px solid #d4d9e1;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.register-input-wrapper:focus-within,
+.register-select-wrapper:focus-within {
+  border-color: #d99a20;
+  box-shadow: 0 0 0 3px rgba(217, 154, 32, 0.12);
+}
+
+.register-input-icon,
+.register-select-icon {
+  width: 37px;
+  text-align: center;
+  color: #17243e;
+  font-size: 14px;
+}
+
+.register-input-wrapper input,
+.register-select-wrapper select {
+  flex: 1;
+  height: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #18253c;
+  font-size: 12px;
+}
+
+.register-input-wrapper input::placeholder {
+  color: #9ca5b2;
+}
+
+.register-password-toggle,
+.register-chevron {
+  width: 37px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: #18243b;
+  font-size: 14px;
+}
+
+.register-password-toggle {
+  cursor: pointer;
+}
+
+.register-select-wrapper {
+  position: relative;
+}
+
+.register-select-wrapper select {
+  color: #26344b;
+  cursor: pointer;
+  appearance: none;
+}
+
+.register-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.register-button {
+  width: 100%;
+  height: 42px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #f8b92f, #d9910d);
+  color: #111a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(207, 143, 22, 0.25);
+  transition: 0.2s;
+}
+
+.register-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+}
+
+.register-button i:first-child {
+  font-size: 14px;
+}
+
+.register-button i:last-child {
+  font-size: 18px;
+}
+
+.register-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.register-divider span {
+  flex: 1;
+  height: 1px;
+  background: #d8dce2;
+}
+
+.register-divider p {
+  margin: 0;
+  color: #8992a0;
+  font-size: 11px;
+}
+
+.register-google-button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: #101a2c;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.register-google-button:hover {
+  background: #17233a;
+}
+
+.register-google-icon {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.register-login {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 17px;
+  color: #596478;
+  font-size: 11px;
+}
+
+.register-login a {
+  color: #c88815;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-login a:hover {
+  text-decoration: underline;
+}
+
+.register-auction-info {
+  width: min(500px, 42vw);
+  color: white;
+  text-align: center;
+}
+
+.register-auction-logo {
+  display: block;
+  width: min(430px, 100%);
+  aspect-ratio: 1;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.38));
+}
+
+.register-tagline {
+  margin-top: 29px;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-style: italic;
+  color: #f2f0e8;
+}
+
+.register-tagline b {
+  margin: 0 7px;
+  color: #eeb53c;
+}
+
+.register-features {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 25px;
+}
+
+.register-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+
+.register-feature strong {
+  margin-top: 7px;
+  font-size: 12px;
+}
+
+.register-feature span {
+  margin-top: 3px;
+}
+
+.register-feature-icon {
+  width: 65px;
+  height: 65px;
+  border: 2px solid #eab33a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0b735;
+  font-size: 20px;
+  box-shadow: 0 0 15px rgba(234, 179, 58, 0.12);
+}
+
+@media (max-width: 1100px) {
+  .register-container {
+    gap: 40px;
+  }
+
+  .register-auction-info {
+    width: 420px;
+  }
+
+  .register-features {
+    gap: 35px;
+  }
+}
+
+@media (max-width: 900px) {
+  .register-container {
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .register-auction-info {
+    display: none;
+  }
+
+  .register-card {
+    width: 100%;
+    max-width: 590px;
+  }
+}
+
+@media (max-width: 500px) {
+  .register-card {
+    padding: 30px 22px;
+    border-radius: 16px;
+  }
+
+  .register-card h1 {
+    font-size: 25px;
+  }
+
+  .register-login {
+    flex-direction: column;
+    text-align: center;
+  }
+}
